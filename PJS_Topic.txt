@@ -1,0 +1,14 @@
+PJS Topics
+
+1- Regular Expression.
+2- Web worker
+3- Blocking / Non Blocking in Javascipt
+4-Interacting html object in Javascript
+5 CallBack in Javascript
+6- Javascript developer tools
+7- Responsive Api in javascript
+8- Javascript minification
+9- Promisis in javascript
+10- Async in Javascipt 
+11-Fetch in Javascript
+

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+    //  let promiseOne = new Promise((resolve,reject)=>{
+        
+    //     setTimeout(()=>{
+    //         console.log("Async task is completed");
+    //         resolve();
+    //     },2000)
+
+    //  })
+    //  promiseOne.then(()=>{
+    //     console.log("Resolved is consumed");
+    
+    //  })
+
+    //  let promiseTwo = new Promise((resolve,reject)=>{
+    //     setTimeout(()=>{
+    //         console.log("Async task 2");
+    //         resolve();  
+    //     },3000)
+    //  }).then(()=>{
+    //         console.log("Async task 2 consumed");
+            
+    //     })
+
+
+    //     let promiseThree = new Promise((resolve,reject)=>{
+
+    //         setTimeout(()=>{
+    //             resolve({'username':'abccd','email':"abc@gmail.com"});
+    //         },2000);
+
+    //     }).then((user)=>{
+    //         console.log(user);
+    //     })
+
+        // let promiseFour = new Promise((resolve,reject)=>{
+
+        //     setTimeout(()=>{
+        //         let error = false;
+        //         if(!error){
+        //             resolve({'username':'abccd','email':"abc@gmail.com"});
+        //         }
+        //         else{
+        //             reject("Went something Wrong");
+        //         }
+        //     },2000)
+        // }).then((user)=>{
+        //     console.log(user);
+        //     return user.username;
+            
+        // }).then((username)=>{
+        //     console.log(username);
+        // })
+        // .catch((err)=>{
+        //     console.log(err);
+            
+        // }).finally(()=>{
+        //     console.log("Promise is either resolve or rejected");
+            
+        // })
+
+        let promiseFive = new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                let error = true;
+                if(!error){
+                    resolve({'username':'abccd','email':"abc@gmail.com"});
+                }
+                else{
+                    reject("Went something Wrong");
+                }
+            },2000)
+        
+        })
+        //******Without try catch async await also read error msg in manner way 
+
+        async function conPromiseEvent (){
+            const response = await promiseFive;
+             console.log(response);
+        }
+        conPromiseEvent ();
+
+        // let consumePromiseEvent = async ()=> {
+        //     const response = await promiseFive;
+        //     try{
+        //         console.log(response);
+                
+        //     }
+        //     catch(err){
+        //         console.log(err);
+                
+        //     }
+        // }
+        // consumePromiseEvent();
+        
+    </script>
+</body>
+</html>

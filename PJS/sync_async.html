@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //sync Example
+        console.log("one");
+        console.log("two");
+        console.log("three");
+
+        // Async Example
+        console.log("one");
+        console.log("two");
+
+        function hey(){
+            console.log("Hii");
+        }
+        setTimeout(hey,2000);
+
+        setTimeout( ()=>{
+            console.log("Hello");
+
+        },3000);
+
+        console.log("three");
+
+    </script>
+</body>
+</html>

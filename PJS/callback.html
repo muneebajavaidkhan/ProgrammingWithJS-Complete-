@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>CallBack Functions</h2>
+    <p id = "para"></p>
+    <script>
+        let displayOut = (output) => {
+            document.getElementById("para").innerHTML = output;
+
+        }
+        let calculate = (num1, num2) => {
+            let sum = num1 + num2;
+            return sum;
+        }
+
+        let res = calculate(50,50);
+        displayOut(res);
+
+        //Another Way
+
+        // let displayOut = (output) => {
+        //     document.getElementById("para").innerHTML = output;
+
+        // }
+        // let calculate = (num1, num2) => {
+        //     let sum = num1 + num2;
+        //     displayOut(sum);
+        // }
+
+        // calculate(50,50);
+
+
+        function greet(name,CallBack){
+            console.log("HI:  "+name);
+            CallBack();
+        }
+       function CallMe(){
+        console.log("This is my callback func");
+       }
+       greet("preety",CallMe);
+    </script>
+</body>
+</html>
