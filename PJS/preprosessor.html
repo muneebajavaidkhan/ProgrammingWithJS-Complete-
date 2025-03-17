@@ -7,9 +7,20 @@
 </head>
 <body>
     <script>
+        
+//Using Typescript preprocessor
         const greet = (name) => `Hello, ${name}`;
 
        console.log(greet("Fahad"));
+
+
+//Using Babel preprocessor
+       var greets = function(name) {
+       return "Hello, " + name;
+       };
+
+      console.log(greets("Sana"));
+      
        
     </script>
 </body>
